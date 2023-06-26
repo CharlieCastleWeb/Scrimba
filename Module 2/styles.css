@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 100px;
+}
+
+.hero {
+    background-image: url(./images/1.jpg);
+    background-size: cover;
+    background-position: 0% 30%;
+    padding-top: 10rem;
+    padding-bottom: 9.7rem;
+    color: white;
+}
+
+h1, h2 {
+    display: block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+h1 {
+    background-color: #0C5C65;
+    width: 41%;
+    font-size: 2.5rem;
+}
+
+h2 {
+    background-color: #1C8087;
+    width: 60%;
+    margin-top: 0.7rem;
+}
+
+.activities {
+    color: #1D3557;
+    background-color: #B4D4DD;
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+.activity-list {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4.5rem;
+}
+
+.activity {
+    width: 26%;
+}
+
+.activity img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin: 1rem auto;
+}
+
+.activity p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.guide {
+    background-color: #5BC5CC;
+    width: 55%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    color: #1D3557;
+    border-radius: 15px;
+    box-shadow: 0px 12px #1D3557;
+    
+}
+
+.guide img{
+    width: 45%;
+    border-radius: 15px;
+}
+
+.guide div {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.guide div p {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
