@@ -14,18 +14,43 @@ body {
     font-family: 'Verdana', sans-serif;
 }
 
-h3 {
-    font-size: 2.5rem; /* 40px */
+h2 {
+    font-size: 3rem;
     line-height: 2.25rem;
 }
 
-.score {
-    font-family: 'Cursed Timer ULiL', sans-serif;
-    color: #F94F6D;
-    font-size: 5.625rem; /* 90px */
+h3 {
+    font-size: 2.5rem; 
+    line-height: 2.25rem;
 }
 
-.score-btn {
+h4 {
+    font-size: 1.2rem; 
+    line-height: 2.25rem;
+}
+
+.display {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    color: #F94F6D;
+}
+
+.quarter {
+    font-size: 3.5rem;
+}
+
+.time {
+    font-size: 6rem; 
+}
+
+.score {
+    font-size: 5rem; 
+}
+
+.fouls {
+    font-size: 3rem;
+}
+
+.btn {
     color: #9AABD8;
     font-family: 'Cursed Timer ULiL', sans-serif;
     font-size: 1.125rem;
@@ -43,35 +68,88 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    gap: 6.5rem;
+    flex-direction: column;
 }
 
-.team-score {
+.display {
+    background-color: #080001;
+}
 
+.timer{
+    margin-top: 1rem;
+    height: 8rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teams {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.teams div {
+    border-radius: 15px;
+    padding: 0.5rem 0.2rem;
+}
+
+.team-winner {
+    background-color: rgba(62, 220, 0, 0.5);
 }
 
 .score {
-    background-color: #080001;
-    margin-top: 1rem;
-    height: 7.5rem;
-    padding-top: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    height: 6.5rem;
+    padding-top: 0.5rem;
     border-radius: 5px;
 }
 
-.score-buttons {
+
+.button-group {
     display: flex;
     justify-content: space-between;
-    margin-top: 1.625rem;
     gap: 0.625rem;
 }
 
-.score-btn {
+.btn {
+    height: 50px;
+    width: 50px;
     background-color: transparent;
     border: 1px solid #9AABD8;
-    padding: 0.6rem;
     border-radius: 3px;
 }
 
+h4 {
+    margin-top: -0.8rem;
+}
 
+.fouls-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.fouls {
+    width: 30%;
+    margin-bottom: 0.5rem;
+    height: 4rem;
+    padding-top: 0.5rem;
+    border-radius: 5px;
+}
+
+.fouls-display .btn {
+    height: 35px;
+    width: 35px;
+    margin-left: 1rem;
+}
+
+.reset-btn {
+    width: 120px;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
