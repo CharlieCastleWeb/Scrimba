@@ -50,7 +50,7 @@ h4 {
     font-size: 3rem;
 }
 
-.btn {
+button {
     color: #9AABD8;
     font-family: 'Cursed Timer ULiL', sans-serif;
     font-size: 1.125rem;
@@ -108,14 +108,13 @@ body {
     border-radius: 5px;
 }
 
-
 .button-group {
     display: flex;
     justify-content: space-between;
     gap: 0.625rem;
 }
 
-.btn {
+button {
     height: 50px;
     width: 50px;
     background-color: transparent;
@@ -134,17 +133,17 @@ h4 {
 }
 
 .fouls {
-    width: 30%;
+    width: 50%;
     margin-bottom: 0.5rem;
     height: 4rem;
     padding-top: 0.5rem;
     border-radius: 5px;
 }
 
-.fouls-display .btn {
+.fouls-display button {
     height: 35px;
     width: 35px;
-    margin-left: 1rem;
+    margin-left: 0.8rem;
 }
 
 .reset-btn {

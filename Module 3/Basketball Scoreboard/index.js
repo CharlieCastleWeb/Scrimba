@@ -23,6 +23,11 @@ let seconds    = 0;
 
 /* --- FUNCTIONS --- */
 
+// Update timer every second
+const startTimer = () => {
+    setInterval(timer, 1000);
+}
+
 // Timer and quarter update
 const timer = () => {
     seconds++;
@@ -45,14 +50,10 @@ const timer = () => {
 
 // Display time and quarter
 const displayTime = (seconds, minutes, quarter) => {
-    quarterDisplay.innerText = quarter;
-    timeDisplay.innerText    = `${minutes}:${seconds}`;
+    quarterDisplay.textContent = quarter;
+    timeDisplay.textContent    = `${minutes}:${seconds}`;
 }
 
-// Update timer every second
-const startTimer = () => {
-    setInterval(timer, 1000);
-}
 
 // Add and display scores and check winner when click score buttons
 scoreButtons.forEach(btn => {
@@ -70,8 +71,8 @@ const addScore = (value, team) => {
 
 // Display scores and winner
 const displayScores = () => {
-    homeScoreDisplay.innerText  = homeScore;
-    guestScoreDisplay.innerText = guestScore;
+    homeScoreDisplay.textContent  = homeScore;
+    guestScoreDisplay.textContent = guestScore;
     checkWinner();
 }
 
@@ -99,27 +100,30 @@ const addFoul = (team) => {
 
 // Display fouls 
 const displayFouls = () => {
-    homeFoulsDisplay.innerText  = homeFouls;
-    guestFoulsDisplay.innerText = guestFouls;
+    homeFoulsDisplay.textContent  = homeFouls;
+    guestFoulsDisplay.textContent = guestFouls;
 }
 
 // Restart variables
 const restart = () => {
-    homeScore = 0;
+    homeScore  = 0;
     guestScore = 0;
-    quarter = 1;
-    minutes = 0;
-    seconds = 0;
-    homeFouls = 0;
+    quarter    = 1;
+    minutes    = 0;
+    seconds    = 0;
+    homeFouls  = 0;
     guestFouls = 0;
 }
 
 // Restart variables and displays when clicking restart button
 resetBtn.addEventListener("click", () => {
     restart();
-    displayTime();
+    displayTime("00", "00", quarter);
     displayScores();
     displayFouls();
 })
 
 startTimer();
+displayTime("00", "00", quarter);
+displayScores();
+displayFouls();
