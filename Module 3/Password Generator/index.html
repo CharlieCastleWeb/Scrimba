@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="index.css">
     <title>Password Generator</title>
 </head>
@@ -14,20 +15,33 @@
         <h1>Generate a <br> <span class="password-heading">random password</span></h1>
         <h2>Never use an insecure password again.</h2>
 
-        <div>
-            <label for="password-length">Select password length:</label>
-            <select name="password-length" id="password-length"></select>
-            <button>Generate passwords</button>
-        </div>
+        <form>
+            <div class="form-input">
+                <select name="password-length" id="password-length" class="password-length"></select>
+                <label for="password-length">Password Length</label>
+            </div>
+            <div class="form-input">
+                <input type="checkbox" name="symbols-check" id="symbols-check">
+                <label for="symbols-check">Include symbols</label>
+            </div>
+            <div class="form-input">
+                <input type="checkbox" name="numbers-check" id="numbers-check">
+                <label for="numbers-check">Include numbers</label>
+            </div>
+            <button type="button">Generate passwords</button>
+        </form>
 
-        <div class="line-break"></div><!-- Ver si lo puedo cambiar por ::after-->
-
-        <div class="passwords-display">
-            <div class="password">>nfJjy!dDvR&ial</div>
-            <div class="password">>nfJjy!dDvR&ial</div>
+        <div class="passwords-displays">
+            <div class="password-display">
+                <div class="password"></div>
+                <div class="material-symbols-outlined copy-icon">content_copy</div>
+            </div>
+            <div class="password-display">
+                <span class="password"></span>
+                <span class="material-symbols-outlined copy-icon">content_copy</span>
+            </div>
         </div>
     </main>
-
     <script src="./index.js"></script>
 </body>
 </html>
