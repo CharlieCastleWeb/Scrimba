@@ -1,4 +1,5 @@
 
+
 const input                  = document.querySelector("input");
 const convertBtn             = document.querySelector("button");
 const userNumbersDisplay     = document.querySelectorAll(".user-number");
