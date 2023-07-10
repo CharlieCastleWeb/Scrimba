@@ -1,0 +1,161 @@
+
+/* --- RESET --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- TYPOGRAPHY --- */
+
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: white;
+    line-height: 2.375rem;
+    letter-spacing: -0.84px;
+}
+
+input {
+    color: white;
+    font-size: 3.625rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    text-align: inherit;
+}
+
+button {
+    color: #3D3D3D;
+    font-weight: 500;
+}
+
+.conversion h3 {
+    color: #5A537B;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25rem    ;
+}
+
+.conversion p,
+.conversion span.ruler-mark {
+    color: #353535;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+/* --- LAYOUT --- */
+
+body {
+    background-color: #1C1C1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    width: 550px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user-input {
+    background-color: #6943FF;
+    padding-top: 2rem;
+}
+
+input,
+button {
+    width: 30%;
+    border-radius: 5px;
+}
+
+input {
+    margin: 0 auto;
+    margin-top: 1.875rem;
+    background-color: #6943FF;
+    border: 1px solid #B295FF;
+    appearance: textfield;
+    display: block;
+}
+
+input:hover,
+input:focus,
+button:hover,
+button:focus {
+    transition: ease-in-out 0.1s;
+}
+
+input:hover,
+input:focus {
+    cursor: pointer;
+    outline: 2px solid #F4F4F4;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+button {
+    margin: 1.625rem 0;
+    padding: 0.5em 0;
+    border: none;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    background-color: #6943FF;
+    outline: 2px solid #F4F4F4;
+    color: white;
+}
+
+.conversions {
+    background-color: #F4F4F4;
+    padding: 1em 2em;
+}
+
+.conversion {
+    margin-top: 1em;
+    padding: 1.5em 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.conversion-results {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.conversion p,
+.conversion span.ruler-mark {
+    margin-top: 1em;
+}
+
+.right-align,
+.left-align {
+    width: 45%;
+}
+
+conversion span.ruler-mark {
+    display: block;
+    align-self: center;
+}
