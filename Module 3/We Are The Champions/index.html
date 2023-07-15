@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="./index.css">
     <title>We Are The Champions</title>
@@ -19,13 +20,13 @@
         <div class="input-area" >
             <textarea 
                 name="endorsement" 
-                id="endorsement" 
+                id="endorsement-message" 
                 cols="30" 
                 rows="5" 
                 placeholder="Write your endorsement here"></textarea>
             <div>
-                <input type="text" placeholder="From">
-                <input type="text" placeholder="To">
+                <input type="text" placeholder="From" id="from-input">
+                <input type="text" placeholder="To" id="to-input">
             </div>
         </div>
         <button>Publish</button>
@@ -33,19 +34,8 @@
 
     <div class="endorsements">
         <h2>- Endorsements -</h2>
-        <div class="endorsement">
-            <h3>To Leanne</h3>
-            <p>
-                Leanne! Thank you so much for helping me with the 
-                March accounting. Saved so much time because of you! 💜 Frode
-            </p>
-            <div>
-                <h3>From Frode</h3>
-                <div class="hearts">
-                    ♥ <span class="heart-number">4</span>
-                </div>
-            </div>
-        </div>
     </div>
+
+    <script src="index.js" type="module"></script>
 </body>
 </html>
