@@ -64,13 +64,14 @@ h3 {
 
 html {
     background-color: #1B1924;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 body {
+    margin-top: 3em;
     width: 35%;
     max-width: 350px;
 }
@@ -155,6 +156,7 @@ button {
     width: 13%;
     display: flex;
     justify-content: space-between;
+    user-select: none;
 }
 
 .material-symbols-outlined {

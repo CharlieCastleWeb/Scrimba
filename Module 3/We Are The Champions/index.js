@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { getDatabase, ref, push, onValue, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 const appSettings = {
     databaseURL: "https://realtime-database-dae1e-default-rtdb.europe-west1.firebasedatabase.app/"
@@ -40,12 +40,23 @@ const clearEndorsements = () => {
     endorsementsDisplay.innerHTML = "";
 }
 
-const displayEndorsement = (endorsement) => {
+const displayEndorsement = (endorsement, currentItemId) => {
     const endorsementDisplay = document.createElement("div");
     const heartDisplay = document.createElement("span");
     heartDisplay.classList.add("material-symbols-outlined");
+    endorsement.hearts > 0 ? heartDisplay.classList.add("liked") : "";
     heartDisplay.addEventListener("click", () => {
-        heartDisplay.classList.add("liked");
+        if (endorsement.hearts > 0) {
+            endorsement.hearts--;
+            heartDisplay.classList.remove("liked");
+
+        } else {
+            endorsement.hearts++;
+            heartDisplay.classList.add("liked");
+        }
+        let locationOfEndorsementInDB = ref(database, `endorsements/${currentItemId}`)
+        update(locationOfEndorsementInDB, { hearts: endorsement.hearts });
+        console.log(endorsement);
     });
     heartDisplay.textContent = "favorite";
     endorsementDisplay.innerHTML = `
@@ -67,8 +78,9 @@ const displayEndorsement = (endorsement) => {
 onValue(endorsementsInDB, (snapshot) => {
     clearInputs();
     clearEndorsements();
-    let endorsementsArr = Object.values(snapshot.val());
+    let endorsementsArr = Object.entries(snapshot.val());
     endorsementsArr.forEach(endorsement => {
-        displayEndorsement(endorsement);
+        let currentItemId = endorsement[0];
+        displayEndorsement(endorsement[1], currentItemId);
     });
 });
