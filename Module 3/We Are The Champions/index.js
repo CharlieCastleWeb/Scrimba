@@ -17,18 +17,49 @@ const endorsementToInput = document.querySelector("#to-input");
 const endorsementsDisplay = document.querySelector(".endorsements")
 
 button.addEventListener("click", () => {
-
     const endorsement = {
         message: endorsementMessageInput.value,
         from: endorsementFromInput.value,
         to: endorsementToInput.value,
         hearts: 0
     }
-
     push(endorsementsInDB, endorsement);
-
-    
 });
+
+// Display an endorsement
+const displayEndorsement = (endorsement, currentItemId) => {
+    const endorsementDisplay = document.createElement("div");
+    const heartDisplay = document.createElement("span");
+    heartDisplay.classList.add("material-symbols-outlined");
+    endorsement.hearts > 0 ? heartDisplay.classList.add("liked") : "";
+    heartDisplay.addEventListener("click", () => {
+        if (!localStorage.getItem(currentItemId)) {
+            endorsement.hearts++;
+            localStorage.setItem(currentItemId, "liked");
+            heartDisplay.classList.add("liked");
+        } else {
+            endorsement.hearts--;
+            localStorage.removeItem(currentItemId);
+            heartDisplay.classList.remove("liked");
+        }
+        let locationOfEndorsementInDB = ref(database, `endorsements/${currentItemId}`)
+        update(locationOfEndorsementInDB, { hearts: endorsement.hearts });
+    });
+    heartDisplay.textContent = "favorite";
+    endorsementDisplay.classList.add("endorsement");
+    endorsementDisplay.innerHTML = `
+        <h3>To ${endorsement.to}</h3>
+        <p>${endorsement.message}</p>
+        <div>
+            <h3>From ${endorsement.from}</h3>
+            <div class="hearts">
+                <span class="heart-number">${endorsement.hearts}</span>
+            </div>
+        </div>
+    `
+    endorsementDisplay.querySelector(".hearts").prepend(heartDisplay);
+    endorsementsDisplay.prepend(endorsementDisplay);
+}
 
 const clearInputs = () => {
     endorsementMessageInput.value = "";
@@ -40,41 +71,7 @@ const clearEndorsements = () => {
     endorsementsDisplay.innerHTML = "";
 }
 
-const displayEndorsement = (endorsement, currentItemId) => {
-    const endorsementDisplay = document.createElement("div");
-    const heartDisplay = document.createElement("span");
-    heartDisplay.classList.add("material-symbols-outlined");
-    endorsement.hearts > 0 ? heartDisplay.classList.add("liked") : "";
-    heartDisplay.addEventListener("click", () => {
-        if (endorsement.hearts > 0) {
-            endorsement.hearts--;
-            heartDisplay.classList.remove("liked");
-
-        } else {
-            endorsement.hearts++;
-            heartDisplay.classList.add("liked");
-        }
-        let locationOfEndorsementInDB = ref(database, `endorsements/${currentItemId}`)
-        update(locationOfEndorsementInDB, { hearts: endorsement.hearts });
-        console.log(endorsement);
-    });
-    heartDisplay.textContent = "favorite";
-    endorsementDisplay.innerHTML = `
-        <div class="endorsement">
-            <h3>To ${endorsement.to}</h3>
-            <p>${endorsement.message}</p>
-            <div>
-                <h3>From ${endorsement.from}</h3>
-                <div class="hearts">
-                    <span class="heart-number">${endorsement.hearts}</span>
-                </div>
-            </div>
-        </div>
-    `
-    endorsementDisplay.querySelector(".hearts").prepend(heartDisplay);
-    endorsementsDisplay.append(endorsementDisplay);
-}
-
+// Refresh app on changes on database
 onValue(endorsementsInDB, (snapshot) => {
     clearInputs();
     clearEndorsements();

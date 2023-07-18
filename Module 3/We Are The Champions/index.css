@@ -64,7 +64,6 @@ h3 {
 
 html {
     background-color: #1B1924;
-    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,11 +127,13 @@ button {
     border-radius: 8px;
 }
 
-.endorsements {
+.endorsements-container {
     margin-top: 1.5em;
+}
+
+.endorsements {
     display: flex;
-    flex-direction: column-reverse;
-    
+    flex-direction: column;
 }
 
 .endorsement {
@@ -147,9 +148,10 @@ button {
 }
 
 .endorsement > div {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between; 
+    margin-top: 0.8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
 }
 
 .hearts {
@@ -168,5 +170,35 @@ button {
     'FILL' 1
 }
 
-/* --- TYPOGRAPHY --- */
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 900px) {
+    body {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+    }
+    body {
+        width: 80%;
+        max-width: 90vw;
+    }
+    .input {
+        min-width: 200px;
+        width: 40%;
+    }
+    h2 {
+        text-align: left;
+    }
+    .endorsements {
+        margin-top: 0.6em;
+        flex-direction: row;
+    }
+    .endorsement {
+        width: 200px;
+        margin-right: 1em;
+    }
+    .hearts {
+        width: 22%;
+    }
+}
 
