@@ -52,6 +52,8 @@ body {
 .phone-display {
     margin: 0.5em auto 0 auto;
     padding: 0.9em;
+    height: 8rem;
+    overflow: hidden;
 }
 
 .pager-display {
