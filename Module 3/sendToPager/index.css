@@ -1,0 +1,105 @@
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    text-align: center;
+}
+
+h2,
+button {
+    font-size: 2.5rem;
+}
+
+.pager h2,
+.phone-display,
+.reset-btn {
+    color: #F8F8F8;
+}
+
+.pager-display,
+.phone-display {
+    font-size: 3.125rem;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* LAYOUT */
+
+html {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+body {
+    width: 794px;
+    margin: 0 auto;
+}
+
+.pager {
+    background-color: #283033;
+    padding: 1em 1.5em;
+}
+
+.pager-display,
+.phone-display {
+    margin: 0.5em auto 0 auto;
+    padding: 0.9em;
+}
+
+.pager-display {
+    background-color: #9EC4B3;
+}
+
+.phone-display {
+    background-color: #444;
+}
+
+.phone {
+    background-color: #D9D9D9;
+    padding: 1em;
+    margin-top: 8em;
+}
+
+.keys {
+    margin: 1rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.1rem 0.8rem;
+}
+
+.key {
+    background-color: #F8F8F8;
+    padding: 0.6em 0;
+    border: none;
+}
+
+.reset-btn,
+.send-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.6em 0;
+}
+
+.reset-btn {
+    background-color: #BE482A;
+    border: 3px solid #000;
+}
+
+.send-btn {
+    background-color: #3D9C7C;
+    border: 3px solid #000;
+}
