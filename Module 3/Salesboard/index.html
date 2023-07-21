@@ -7,40 +7,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <!-- Styles -->
     <link rel="stylesheet" href="index.css">
     <title>Salesboard</title>
 </head>
-<body>
-    
+<body class="preload">
+    <nav>
+        <button class="preload" id="dark-mode">Toggle dark mode</button>
+        <button class="preload" id="reset-app">Reset App</button>
+    </nav>
     <h1>Salesboard 🔔</h1>
 
     <img src="./images/picture.jpg" alt="Profile picture of sales guy">
 
     <div class="buttons">
-        <button id="star-btn">⭐</button>
-        <button id="fire-btn">🔥</button>
+        <button id="product-a-btn" class="preload"></button>
+        <button id="product-b-btn" class="preload"></button>
     </div>
 
-    <div class="measurement-bar">
-        <h2>Live Sales - <span>12</span></h2>
-        <p class="emojis-bar">⭐⭐⭐🔥⭐⭐🔥🔥⭐⭐⭐⭐</p>
+    <div class="measurement-bar" id="sales-counter">
+        <h2>Live Sales - <span></span></h2>
+        <p class="emojis-bar"></p>
     </div>
     
-    <div class="measurement-bar">
-        <h2>Live Achievements - <span>2</span></h2>
-        <p class="emojis-bar">🔔💰</p>
+    <div class="measurement-bar" id="achievements-counter">
+        <h2>Live Achievements - <span></span></h2>
+        <p class="emojis-bar"></p>
     </div>
 
     <div class="results">
         <div class="revenue-display">
             <h2>Total Revenue</h2>
-            <p>$ <span>2700</span></p>
+            <p>$ <span id="revenue"></span></p>
         </div>
         <div class="commision-display">
             <h2>Total Commision</h2>
-            <p>$ <span>675</span></p>
+            <p>$ <span id="commision"></span></p>
         </div>
     </div>
 
+    <script src="./index.js"></script>
 </body>
 </html>
