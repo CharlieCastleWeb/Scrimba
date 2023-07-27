@@ -90,8 +90,8 @@ button{
 
 nav {
     position: absolute;
-    right: 5%;
-    top: 5%;
+    right: 3em;
+    top: 4em;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -130,7 +130,3 @@ p::after {
 .results div {
     flex: 1;
 }
-
-
-
-
