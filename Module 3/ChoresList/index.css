@@ -1,3 +1,100 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
 body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+h1 {
   font-family: "Concert One", cursive;
+  font-size: 4.375rem;
+}
+
+.input-area,
+p {
+  font-size: 1.875rem;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  color: #a4a4a4;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* LAYOUT */
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 1em;
+}
+
+.input-area {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.2em;
+}
+
+input,
+button,
+.chore {
+  border-radius: 10px;
+}
+
+input {
+  border: none;
+  background-color: #eeeeee;
+  padding: 1em 1em;
+  flex: 1;
+}
+
+button {
+  border: none;
+  padding: 0.5em 1em;
+}
+
+input:hover,
+button:hover,
+.chore:hover {
+  cursor: pointer;
+  background: linear-gradient(rgb(0 0 0 / 15%) 0 0);
+}
+
+button.arrow-icon {
+  background-color: #ffcc68;
+}
+
+button.cross-icon {
+  background-color: #ff9548;
+}
+
+.chore {
+  background-color: #fbdf7c;
+  margin-top: 1em;
+  padding: 1.7em 1em;
+}
+
+.success-gif {
+  width: 100%;
+  max-height: 400px;
+  margin-top: 1em;
 }

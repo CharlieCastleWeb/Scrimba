@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>Chorelist</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Choreslist</h1>
-        <input type="text">
-        <button>-></button>
-        <button>✕</button>
+      <h1>Choreslist</h1>
+      <div class="input-area">
+        <input type="text" id="chore-input" />
+
+        <button class="arrow-icon" id="arrow-btn">-></button>
+        <button class="cross-icon" id="cross-btn">✕</button>
+      </div>
+      <div class="chores-list" id="chores-list">
+        <!-- Display chores -->
+        <img src="https://media.giphy.com/media/yoJC2GnSClbPOkV0eA/giphy.gif" alt="">
+      </div>
     </div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
