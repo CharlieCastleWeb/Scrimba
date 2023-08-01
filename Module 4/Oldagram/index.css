@@ -1,0 +1,109 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./assets/fonts/SourceSansPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./assets/fonts/SourceSansPro-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+
+.post-user,
+.likes-count,
+.comment-user {
+  font-weight: bold;
+}
+
+/* LAYOUT */
+
+body {
+  background-color: #ededed;
+}
+
+header,
+.post {
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.logo {
+  width: 40%;
+  object-fit: cover;
+}
+
+.user-avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.post {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.post-header img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.post-header div {
+  margin-left: 1em;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.social-interactions {
+  display: flex;
+  padding: 1em;
+}
+
+.social-interactions img {
+  width: 10%;
+  margin-right: 1em;
+}
+
+.comment-user {
+    margin-right: 0.5em;
+}
+
+/* MEDIA QUERIES */
