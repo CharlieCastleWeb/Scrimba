@@ -37,6 +37,7 @@ body {
 
 body {
   background-color: #ededed;
+  font-size: 13px;
 }
 
 header,
@@ -53,39 +54,36 @@ header,
 header {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.2em 0.8em;
   border-bottom: 1px solid #c6c6c6;
 }
 
-.logo {
-  width: 40%;
-  object-fit: cover;
-}
-
-.user-avatar {
-  width: 20%;
+.avatar {
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
 }
 
+.logo {
+  width: 127px;
+  /* object-fit: cover; */
+}
+
 .post {
-    margin-bottom: 1em;
-    padding-bottom: 1em;
+  margin-bottom: 2.5em;
+  padding-bottom: 1em;
 }
 
 .post-header {
   display: flex;
   align-items: center;
-  padding: 1em;
-}
-
-.post-header img {
-  width: 20%;
-  border-radius: 50%;
+  padding: 0.7em 0.8em;
 }
 
 .post-header div {
-  margin-left: 1em;
+  margin-left: 0.4em;
 }
 
 .post-image {
@@ -94,16 +92,34 @@ header {
 
 .social-interactions {
   display: flex;
-  padding: 1em;
+  padding: 0.9em 0.5em;
 }
 
 .social-interactions img {
-  width: 10%;
-  margin-right: 1em;
+  width: 8%;
+  margin-right: 0.8em;
+}
+
+.social-interactions img:hover {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.comment,
+.likes-count {
+  margin-left: 1em;
+}
+
+.comment {
+  margin-right: 0.5em;
+  margin-top: 1em;
 }
 
 .comment-user {
-    margin-right: 0.5em;
+  margin-right: 0.5em;
 }
 
-/* MEDIA QUERIES */
+.liked {
+  filter: invert(29%) sepia(92%) saturate(4414%) hue-rotate(348deg)
+    brightness(98%) contrast(107%);
+}
