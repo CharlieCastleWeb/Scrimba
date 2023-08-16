@@ -1,0 +1,136 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+nav ul {
+  font-size: 1.5625rem;
+}
+
+.link-active {
+    font-weight: 700;
+}
+
+button {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.account {
+  font-size: 1.5625rem;
+  font-weight: 700;
+}
+
+.spending {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* LAYOUT */
+
+.logo {
+  display: block;
+  margin: 2.5em auto 2.4em auto;
+}
+
+nav {
+  background-color: #ffd18c;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 51%;
+  margin: 0 auto;
+  padding: 0.7em 0;
+}
+
+nav ul li {
+  display: block;
+}
+
+main {
+    background-color: #FDF7F4;
+    padding-top: 1.9em;
+    padding-bottom: 5em;
+}
+
+.actions {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+button,
+.account {
+  border: 5px solid #ffa724;
+}
+
+button {
+  background-color: transparent;
+  padding: 0.5em 0;
+  width: 48%;
+  border-radius: 50px;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  width: 76%;
+  margin: 3em auto;
+}
+
+.accounts,
+.spendings {
+  width: 48%;
+  /* padding-top: 1em; */
+}
+
+h2 {
+  padding-bottom: 0.5em;
+}
+
+.account,
+.spending {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.account-active {
+  background-color: #ffd18c;
+}
+
+.account {
+  margin-bottom: 0.7em;
+  padding: 1.4em 1em;
+  width: 100%;
+}
+
+.account span,
+.spending span {
+  display: block;
+}
+
+.spending {
+  background-color: #ffd18c;
+  margin-bottom: 0.8em;
+  padding: 0.7em;
+}
