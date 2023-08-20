@@ -17,8 +17,8 @@ nav ul {
   font-size: 1.5625rem;
 }
 
-.link-active {
-    font-weight: 700;
+.link-home {
+  font-weight: 700;
 }
 
 button {
@@ -65,10 +65,16 @@ nav ul li {
   display: block;
 }
 
+nav ul li:hover,
+nav ul li:focus {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 main {
-    background-color: #FDF7F4;
-    padding-top: 1.9em;
-    padding-bottom: 5em;
+  background-color: #fdf7f4;
+  padding-top: 1.9em;
+  padding-bottom: 5em;
 }
 
 .actions {
@@ -90,6 +96,12 @@ button {
   border-radius: 50px;
 }
 
+button:hover,
+button:focus {
+    background-color: #ffa724;
+    cursor: pointer;
+}
+
 .display {
   display: flex;
   justify-content: space-between;
@@ -97,10 +109,12 @@ button {
   margin: 3em auto;
 }
 
-.accounts,
-.spendings {
+.accounts {
   width: 48%;
-  /* padding-top: 1em; */
+}
+
+.accounts {
+  margin: 0 auto;
 }
 
 h2 {
@@ -109,6 +123,7 @@ h2 {
 
 .account,
 .spending {
+  transition: all ease-in-out 0.3s;
   display: flex;
   justify-content: space-between;
   border-radius: 15px;
@@ -129,8 +144,20 @@ h2 {
   display: block;
 }
 
+.spendings {
+  width: 0;
+  transition: all ease 0.3s;
+  opacity: 0;
+}
+
 .spending {
+  width: 40%;
   background-color: #ffd18c;
   margin-bottom: 0.8em;
   padding: 0.7em;
+}
+
+.show-spendings {
+  width: 48%;
+  opacity: 1;
 }
