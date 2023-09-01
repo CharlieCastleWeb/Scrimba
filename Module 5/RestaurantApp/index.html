@@ -19,74 +19,57 @@
         </header>
 
         <main>
-            <div class="menu">
-                <div class="menu-item">
-                    <img src="./assets/images/pizza.png" alt="icon of pizza" />
-                    <div class="menu-item-description">
-                        <p class="title">Pizza</p>
-                        <p class="menu-item-ingredients">
-                            pepperoni, mushrom, mozzarella
-                        </p>
-                        <p class="price menu-item-price">$ 14</p>
-                    </div>
-                    <button class="order-add-btn">+</button>
-                </div>
-                <div class="menu-item">
-                    <img src="./assets/images/burger.png" alt="icon of pizza" />
-                    <div class="menu-item-description">
-                        <p class="title">Hamburger</p>
-                        <p class="menu-item-ingredients">
-                            beef, cheese, lettuce
-                        </p>
-                        <p class="price menu-item-price">$ 12</p>
-                    </div>
-                    <button class="order-add-btn">+</button>
-                </div>
-                <div class="menu-item">
-                    <img src="./assets/images/beer.png" alt="icon of pizza" />
-                    <div class="menu-item-description">
-                        <p class="title">Beer</p>
-                        <p class="menu-item-ingredients">
-                            grain, hops, yeast, water
-                        </p>
-                        <p class="price menu-item-price">$ 12</p>
-                    </div>
-                    <button class="order-add-btn">+</button>
-                </div>
-            </div>
+            <!-- Menu items inserted in JS -->
+            <div class="menu"></div>
             <div class="order">
                 <h3>Your order</h3>
-                <div class="order-item">
-                    <p class="title">Pizza</p>
-                    <button class="order-item-remove">remove</button>
-                    <p class="price">$14</p>
-                </div>
-                <div class="order-item">
-                    <p class="title">Beer</p>
-                    <button class="order-item-remove">remove</button>
-                    <p class="price">$12</p>
-                </div>
-
+                <!-- Order items inserted in JS -->
+                <div class="order-items"></div>
                 <div class="total-price">
                     <p class="title">Total price</p>
-                    <p class="price total-price-price">$26</p>
+                    <!-- Total price inserted in JS -->
+                    <p class="price total-price-price" id="total-order-display"></p>
                 </div>
-
-                <button class="btn">Complete order</button>
+                <button class="btn" id="complete-order">Complete order</button>
             </div>
+
+            <p class="confirmation-message">
+                Thanks, James! Your order is on its way!
+            </p>
 
             <div class="modal">
                 <p>Enter card details</p>
-                <form action="">
-                    <label for="user-name"></label>
-                    <input type="text" name="user-name" id="user-name" placeholder="Enter your name"/>
-                    <label for="user-card"></label>
-                    <input type="text" name="user-card" id="user-card" placeholder="Enter card number"/>
-                    <label for="user-cvv"></label>
-                    <input type="text" name="user-cvv" id="user-cvv" placeholder="Enter CVV"/>
+                <form id ="payment-form">
+                    <label for="userName"></label>
+                    <input
+                        type="text"
+                        name="userName"
+                        id="userName"
+                        placeholder="Enter your name"
+                        required
+                    />
+                    <label for="userCard"></label>
+                    <input
+                        type="text"
+                        maxlength="20"
+                        name="userCard"
+                        id="userCard"
+                        placeholder="Enter card number"
+                        required
+                    />
+                    <label for="userCvv"></label>
+                    <input
+                        type="text"
+                        name="userCvv"
+                        id="userCvv"
+                        placeholder="Enter CVV"
+                        required
+                    />
                     <button type="submit" class="btn">Pay</button>
                 </form>
             </div>
         </main>
     </body>
+
+    <script src="index.js" type="module"></script>
 </html>

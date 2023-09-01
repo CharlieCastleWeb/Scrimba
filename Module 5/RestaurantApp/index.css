@@ -34,6 +34,10 @@ h2 {
     line-height: 1.0625rem;
 }
 
+.menu-item-emoji {
+    font-size: 4.5rem;
+}
+
 .menu-item-ingredients {
     color: #8b8b8b;
     line-height: 1.5rem;
@@ -70,6 +74,12 @@ h3 {
     font-weight: 700;
 }
 
+.confirmation-message {
+    font-size: 2rem;
+    color: #065f46;
+    text-align: center;
+}
+
 .modal {
     font-family: Verdana, sans-serif;
 }
@@ -80,11 +90,21 @@ h3 {
     text-align: center;
 }
 
-.modal input{
+.modal input {
     font-size: 1.25rem;
 }
 
 /* LAYOUT */
+
+body {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
 
 header {
     background-image: url("./assets/images/ferks-guare-KEZdWfYD-ow-unsplash\ 1.png");
@@ -96,7 +116,6 @@ h2 {
 }
 
 .menu {
-    width: 85%;
     margin: 0em auto;
     padding-top: 1.6em;
 }
@@ -106,6 +125,10 @@ h2 {
     padding: 0em 0 3em 0;
     display: flex;
     border-bottom: 1px solid #d2d2d2;
+}
+
+.menu-item-emoji {
+    margin-top: -0.15em;
 }
 
 .menu-item-description {
@@ -137,10 +160,10 @@ button {
 }
 
 .order {
-    width: 85%;
     margin: 0 auto;
     margin-top: 2em;
     padding-top: 1em;
+    display: none;
 }
 
 .order-item {
@@ -188,8 +211,16 @@ h3 {
     margin: 3.8em 0 1em 0;
 }
 
+.confirmation-message {
+    display: none;
+    border-radius: 3px;
+    background-color: #ecfdf5;
+    padding: 1em;
+    margin: 1em auto;
+}
+
 .modal {
-    width: 85%;
+    width: 542px;
     height: 47vh;
     border-radius: 4px;
     position: fixed;
@@ -201,6 +232,7 @@ h3 {
     background-color: white;
     padding: 1em;
     box-shadow: 0px 0px 300px 50px rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 .modal p {
@@ -215,9 +247,14 @@ h3 {
     width: 100%;
     padding: 1em 1em;
     margin-top: 1.9em;
-    
 }
 
 .modal .btn {
-    margin: 2em 0
+    margin: 2em 0;
+}
+
+/* UTILITY CLASSES */
+
+.display-block {
+    display: block;
 }
