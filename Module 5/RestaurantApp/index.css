@@ -221,13 +221,11 @@ h3 {
 
 .modal {
     width: 542px;
-    height: 47vh;
     border-radius: 4px;
     position: fixed;
-    top: -3.2%;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     margin: auto;
     background-color: white;
     padding: 1em;
