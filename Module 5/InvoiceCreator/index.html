@@ -3,6 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./index.css" />
         <title>Invoice Creator</title>
     </head>
     <body>
@@ -13,15 +20,28 @@
 
         <main>
             <form action="">
-                <input type="text" />
+                <input type="text" placeholder="Enter task" />
                 <select name="task-price" id="task-price">
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                    <option value="40">40</option>
-                    <option value="50">50</option>
+                    <option value="10">$10</option>
+                    <option value="20">$20</option>
+                    <option value="30">$30</option>
+                    <option value="40">$40</option>
+                    <option value="50">$50</option>
                 </select>
-                <button type="submit">+</button>
+                <button type="submit">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                    >
+                        <path
+                            d="M11.5385 18.4615C11.5385 19.3125 10.851 20 10 20C9.14904 20 8.46154 19.3125 8.46154 18.4615V11.5385H1.53846C0.6875 11.5385 0 10.851 0 10C0 9.14904 0.6875 8.46154 1.53846 8.46154H8.46154V1.53846C8.46154 0.6875 9.14904 0 10 0C10.851 0 11.5385 0.6875 11.5385 1.53846V8.46154H18.4615C19.3125 8.46154 20 9.14904 20 10C20 10.851 19.3125 11.5385 18.4615 11.5385H11.5385V18.4615Z"
+                            fill="white"
+                        />
+                    </svg>
+                </button>
             </form>
             <div class="task-list">
                 <div class="tasks">
@@ -47,7 +67,7 @@
                     <p class="notes">We accept cash, credit card, or PayPal</p>
                     <p class="total-price">$60</p>
                 </div>
-                <button>
+                <button class="send-invoice-btn">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="21"
@@ -59,7 +79,9 @@
                             d="M16.5 4.5L16.5001 4.5C16.8829 4.49993 17.2513 4.64622 17.5297 4.90892C17.7305 5.0984 17.8737 5.33809 17.9462 5.60038L10.5 9.323L3.05384 5.60038C3.12634 5.33809 3.26945 5.0984 3.47029 4.90892C3.74874 4.64622 4.1171 4.49993 4.49991 4.5H4.5H16.5ZM10.2764 12.5652L10.5 12.677L10.7236 12.5652L18 8.92702V14C18 14.3978 17.842 14.7794 17.5607 15.0607C17.2794 15.342 16.8978 15.5 16.5 15.5H4.5C4.10218 15.5 3.72064 15.342 3.43934 15.0607L3.08959 15.4104L3.43934 15.0607C3.15804 14.7794 3 14.3978 3 14V8.92702L10.2764 12.5652Z"
                             fill="white"
                             stroke="white"
-                        /></svg>Send invoice
+                        />
+                    </svg>
+                    <p>Send invoice</p>
                 </button>
             </div>
         </main>
