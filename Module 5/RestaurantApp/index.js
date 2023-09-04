@@ -11,6 +11,12 @@ const confirmationMessage = document.querySelector(".confirmation-message");
 
 let orderSum = 0;
 
+const helperObj = [...menuArray].reduce((accumulator, currentValue) => {
+    accumulator[currentValue.name] = currentValue;
+    accumulator[currentValue.name].quantity = 0;
+    return accumulator;
+}, {});
+
 // Display a food item in the menu
 const displayMenuItem = ({ emoji, name, ingredients, price }) => {
     const menuItemtemplate = `
@@ -42,6 +48,7 @@ const displayMenuItem = ({ emoji, name, ingredients, price }) => {
 const displayOrderItem = (name, price) => {
     const orderItemTemplate = `
             <p class="title">${name}</p>
+            <p class="quantity">Quantity: <span id="${name}">${helperObj[name].quantity}</span></p>
             <p class="price">$ ${price}</p>
     `;
     // Create new order item
@@ -53,17 +60,26 @@ const displayOrderItem = (name, price) => {
     removeBtn.classList.add("order-item-remove");
     removeBtn.innerHTML = "remove";
     removeBtn.addEventListener("click", (e) => {
-        removeItem(e, price);
+        removeItem(e, name, price);
     });
     newOrderItem.insertBefore(removeBtn, newOrderItem.childNodes[2]);
     orderItemsDisplay.append(newOrderItem);
 };
 
+const existingItems = [];
+
 // Updates order when adding item from menu
 const updateOrder = (name, price) => {
-    orderDisplay.classList.add("display-block");
-    displayOrderItem(name, price);
-    updateOrderSum(price);
+    if (!existingItems.includes(name)) {
+        existingItems.push(name);
+        orderDisplay.classList.add("display-block");
+        displayOrderItem(name, price);
+        document.querySelector(`#${name}`).textContent = 1;
+        updateOrderSum(price);
+    } else {
+        document.querySelector(`#${name}`).textContent++;
+        updateOrderSum(price);
+    }
 };
 
 // Updates total order price
@@ -77,9 +93,14 @@ const updateOrderSum = (price) => {
 };
 
 // Remove item from order
-const removeItem = (e, price) => {
-    orderItemsDisplay.removeChild(e.target.parentElement);
-    updateOrderSum(-price);
+const removeItem = (e, name, price) => {
+    if (existingItems.includes(name)) {
+        document.querySelector(`#${name}`).textContent--;
+        updateOrderSum(-price);
+    } else {
+        orderItemsDisplay.removeChild(e.target.parentElement);
+        updateOrderSum(-price);
+    }
 };
 
 // Display menu items on load
