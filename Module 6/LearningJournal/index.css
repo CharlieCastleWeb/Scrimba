@@ -240,6 +240,7 @@ img {
 }
 
 .hero img {
+    width: 100%;
     position: absolute;
     z-index: -1;
 }
@@ -278,7 +279,8 @@ img {
     margin-top: 0.5em;
 }
 
-.recent-posts h4 {
+.recent-posts img {
+    width: 100%;
 }
 
 .extended-post .post-content {
@@ -343,3 +345,29 @@ footer {
 /* =================
     MEDIA QUERIES
    ================= */
+
+@media screen and (min-width: 500px) {
+    body {
+    }
+
+    .hero {
+        overflow: hidden;
+        
+    }
+    .hero a {
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+    }
+
+    .hero img {
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .hero .post-content {
+        margin-bottom: 4em;
+    }
+}
