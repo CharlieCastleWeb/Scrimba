@@ -43,6 +43,7 @@ h1 {
 .extended-post-date,
 .hero .post-content,
 .extended-post .post-content,
+.about-post .post-content,
 .recent-posts .post-date,
 .recent-posts .post-content,
 .footer-copyright {
@@ -56,6 +57,7 @@ nav ul li {
 .hero-post-title,
 .extended-post-title,
 .extended-post h4,
+.about-post h4,
 .recent-posts h4,
 .recent-posts h3,
 .view-more-btn,
@@ -108,6 +110,11 @@ nav ul li a {
     letter-spacing: -0.96px;
 }
 
+.about-post .extended-post-title {
+    line-height: 1.16;
+    letter-spacing: 0.5px;
+}
+
 .hero .post-content,
 .extended-post .post-content {
     font-size: 1rem;
@@ -128,6 +135,10 @@ nav ul li a {
 }
 
 .extended-post h4 {
+    margin-top: 1.3em;
+}
+
+.about-post h4 {
     margin-top: 1.3em;
 }
 
@@ -180,7 +191,8 @@ header,
 .hero-post-title,
 .hero .post-content,
 .recent-posts,
-.extended-post {
+.extended-post,
+.about-post {
     width: 90%;
     margin: 0 auto;
 }
@@ -232,7 +244,8 @@ img {
     z-index: -1;
 }
 
-.extended-post {
+.extended-post,
+.about-post {
     margin-top: 2em;
 }
 
@@ -247,6 +260,14 @@ img {
 .extended-post-title {
     margin-top: 0.5em;
     margin-bottom: -0.1em;
+}
+
+.about-post .extended-post-title {
+    width: 85%;
+}
+
+.about-post p:first-of-type {
+    margin-bottom: 3.2em;
 }
 
 .hero-post-title {
@@ -264,6 +285,10 @@ img {
     margin-top: 1.2em;
 }
 
+.about-post .post-content {
+    margin-top: 1.2em;
+}
+
 .extended-post img {
     width: 100%;
     display: block;
@@ -272,6 +297,13 @@ img {
     object-fit: cover;
     object-position: center top;
     margin-bottom: 2.25em;
+}
+
+img.profile-picture {
+    display: block;
+    margin-top: -0.5em;
+    margin-bottom: 1.8em;
+    width: 49%;
 }
 
 .recent-posts .post {
@@ -295,7 +327,7 @@ img {
     background-color: transparent;
     display: block;
     width: 30%;
-    margin: 1.8em auto 0.9em auto;
+    margin: 1.8em auto -1em auto;
 }
 
 footer {
