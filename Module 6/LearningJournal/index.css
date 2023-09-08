@@ -1,0 +1,313 @@
+/* =================
+    RESET
+   ================= */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =================
+    TYPOGRAPHY
+   ================= */
+
+@font-face {
+    font-family: "Roboto";
+    src: url(./assets/fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(./assets/fonts/source-sans-pro/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "Source Sans Pro_Semibold";
+    src: url(./assets/fonts/source-sans-pro/SourceSansPro-Semibold.otf);
+}
+
+@font-face {
+    font-family: "Source Sans Pro_Bold";
+    src: url(./assets/fonts/source-sans-pro/SourceSansPro-Bold.otf);
+}
+
+/* Font families*/
+
+h1 {
+    font-family: "Roboto", sans-serif;
+}
+
+.hero-post-date,
+.extended-post-date,
+.hero .post-content,
+.extended-post .post-content,
+.recent-posts .post-date,
+.recent-posts .post-content,
+.footer-copyright {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+nav ul li {
+    font-family: "Source Sans Pro_Semibold", sans-serif;
+}
+
+.hero-post-title,
+.extended-post-title,
+.extended-post h4,
+.recent-posts h4,
+.recent-posts h3,
+.view-more-btn,
+.footer-title {
+    font-family: "Source Sans Pro_Bold";
+}
+
+/* Typography */
+
+body {
+    font-size: 16px;
+}
+
+h1 {
+    color: #0e0e0e;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.407px;
+}
+
+nav ul li a {
+    color: #090909;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero {
+    color: white;
+}
+
+.hero a,
+.post a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-post-date,
+.extended-post-date {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.hero-post-title,
+.extended-post-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.96px;
+}
+
+.hero .post-content,
+.extended-post .post-content {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.recent-posts .post-date {
+    color: black;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.recent-posts h3 {
+    color: #141414;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.1; /* 25.968px */
+}
+
+.extended-post h4 {
+    margin-top: 1.3em;
+}
+
+.recent-posts h4 {
+    margin-top: 3.2em;
+    text-align: center;
+    margin-bottom: -0.7em;
+}
+
+.recent-posts .post-content {
+    color: #505050;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.view-more-btn {
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+footer p {
+    text-align: center;
+}
+
+.footer-title {
+    color: #ececec;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.36px;
+}
+
+.footer-copyright {
+    color: #d7d7d7;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+/* =================
+    LAYOUT
+   ================= */
+
+header,
+.hero-post-date,
+.hero-post-title,
+.hero .post-content,
+.recent-posts,
+.extended-post {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    margin: 0 auto;
+    display: flex;
+    padding: 1.1em 0;
+    align-items: center;
+}
+header img {
+    display: block;
+    margin-right: 0.2em;
+}
+header nav {
+    margin-left: auto;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul li {
+    margin-left: 3em;
+}
+
+header nav ul li a,
+.view-more-btn {
+    cursor: pointer;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus,
+.view-more-btn:hover,
+.view-more-btn:focus {
+    color: rgb(52, 66, 224);
+}
+
+.hero {
+    position: relative;
+    padding-bottom: 1.2em;
+}
+
+img {
+    border-radius: 3px;
+}
+
+.hero img {
+    position: absolute;
+    z-index: -1;
+}
+
+.extended-post {
+    margin-top: 2em;
+}
+
+.hero-post-date {
+    padding-top: 7.2em;
+}
+
+.extended-post-date {
+    /* Añadir diseño particular */
+}
+
+.extended-post-title {
+    margin-top: 0.5em;
+    margin-bottom: -0.1em;
+}
+
+.hero-post-title {
+    margin-top: 0.3em;
+}
+
+.hero .post-content {
+    margin-top: 0.5em;
+}
+
+.recent-posts h4 {
+}
+
+.extended-post .post-content {
+    margin-top: 1.2em;
+}
+
+.extended-post img {
+    width: 100%;
+    display: block;
+    margin-top: 2.15em;
+    max-height: 191px;
+    object-fit: cover;
+    object-position: center top;
+    margin-bottom: 2.25em;
+}
+
+.recent-posts .post {
+    margin-top: 2.4em;
+}
+
+.recent-posts .post .post-date {
+    margin-top: 0.8em;
+}
+
+.recent-posts .post h3 {
+    margin-top: 0.4em;
+}
+
+.recent-posts .post .post-content {
+    margin-top: 0.5em;
+}
+
+.view-more-btn {
+    border: none;
+    background-color: transparent;
+    display: block;
+    width: 30%;
+    margin: 1.8em auto 0.9em auto;
+}
+
+footer {
+    background-color: #202020;
+    margin-top: 3.5em;
+    padding: 2.4em 0 1.8em 0;
+}
+
+.footer-copyright {
+    margin-top: 0.3em;
+}
+
+/* =================
+    MEDIA QUERIES
+   ================= */
