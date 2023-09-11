@@ -414,9 +414,6 @@ footer {
         padding-bottom: 2.5em;
     }
 
-    .hero .post-content {
-    }
-
     .hero-post-date,
     .hero-post-title,
     .hero .post-content {
@@ -435,10 +432,12 @@ footer {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 20px;
     }
 
     .recent-posts .post {
-        max-width: 310px;
+        flex: 1 1 45%;
+        max-width: 350px;
     }
 
     .recent-posts img {
