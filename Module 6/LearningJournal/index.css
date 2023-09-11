@@ -131,7 +131,7 @@ nav ul li a {
     color: #141414;
     font-size: 1.5rem;
     font-weight: 700;
-    line-height: 1.1; /* 25.968px */
+    line-height: 1.1;
 }
 
 .extended-post h4 {
@@ -232,7 +232,6 @@ header nav ul li a:focus,
 
 .hero {
     position: relative;
-    padding-bottom: 1.2em;
 }
 
 img {
@@ -241,21 +240,18 @@ img {
 
 .hero img {
     width: 100%;
+}
+
+.hero-content {
     position: absolute;
-    z-index: -1;
+    margin-bottom: 1.8em;
+    bottom: 0;
+    z-index: 2;
 }
 
 .extended-post,
 .about-post {
     margin-top: 2em;
-}
-
-.hero-post-date {
-    padding-top: 7.2em;
-}
-
-.extended-post-date {
-    /* Añadir diseño particular */
 }
 
 .extended-post-title {
@@ -277,6 +273,10 @@ img {
 
 .hero .post-content {
     margin-top: 0.5em;
+}
+
+.recent-posts {
+    margin-top: -0.5em;
 }
 
 .recent-posts img {
@@ -346,7 +346,7 @@ footer {
     MEDIA QUERIES
    ================= */
 
-@media screen and (min-width: 500px) {
+/* @media screen and (min-width: 500px) {
     body {
     }
 
@@ -370,4 +370,4 @@ footer {
     .hero .post-content {
         margin-bottom: 4em;
     }
-}
+} */
