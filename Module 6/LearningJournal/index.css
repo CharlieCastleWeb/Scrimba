@@ -365,10 +365,6 @@ footer {
         font-size: 2.5rem;
     }
 
-    .hero .post-content {
-        /* text-align: left; */
-    }
-
     .extended-post-date {
         font-size: 1rem;
     }
@@ -392,7 +388,6 @@ footer {
     .recent-posts h4 {
         font-size: 1.5rem;
     }
-
 
     /* LAYOUT */
 
@@ -435,7 +430,7 @@ footer {
     .recent-posts {
         margin-top: 1em;
     }
-    
+
     .recent-posts .posts {
         display: flex;
         justify-content: space-between;
@@ -461,7 +456,8 @@ footer {
         padding-top: 4.7em;
     }
 
-    .extended-post *, .about-post-content * {
+    .extended-post *,
+    .about-post-content * {
         width: 86.5%;
         margin: 0 auto;
     }
@@ -508,5 +504,4 @@ footer {
     .recent-posts h4 {
         margin-top: 2em;
     }
-
 }
