@@ -36,7 +36,7 @@ const displayPost = ({
                 <img
                     src="${imgUrl}"
                     alt="${imgAlt}"
-                />
+                >
                 <p class="post-date">${postDate}</p>
                 <h3>${postTitle}</h3>
                 <p class="post-content">${postContent}</p>
