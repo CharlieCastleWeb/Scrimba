@@ -1,0 +1,93 @@
+@import url("./main.css");
+
+/* =================
+    TYPOGRAPHY
+   ================= */
+
+.extended-post-date {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.extended-post-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.96px;
+}
+
+.extended-post .post-content {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* =================
+    LAYOUT
+   ================= */
+
+.extended-post h4 {
+    margin-top: 1.3em;
+}
+
+.extended-post {
+    margin-top: 2em;
+}
+
+.extended-post-title {
+    margin-top: 0.5em;
+    margin-bottom: -0.1em;
+}
+
+.extended-post .post-content {
+    margin-top: 1.2em;
+}
+
+.extended-post img {
+    width: 100%;
+    display: block;
+    margin-top: 2.15em;
+    max-height: 191px;
+    object-fit: cover;
+    object-position: center top;
+    margin-bottom: 2.25em;
+}
+
+/* =================
+    MEDIA QUERIES
+   ================= */
+
+@media screen and (min-width: 700px) {
+    /* TYPOGRAPHY */
+
+    .extended-post h4 {
+        font-size: 1.5rem;
+    }
+    .extended-post-content .post-content {
+        font-size: 1.14rem;
+    }
+
+    /* LAYOUT */
+
+    .extended-post {
+        margin-top: 0;
+        padding-top: 4.7em;
+    }
+
+    .extended-post * {
+        width: 86.5%;
+        margin: 0 auto;
+    }
+
+    .extended-post h2 {
+        margin-top: 0.6em;
+        margin-bottom: 0.8em;
+    }
+
+    .extended-post img {
+        min-height: 488px;
+        object-position: center top;
+    }
+    .extended-post-content {
+        width: 100%;
+    }
+}

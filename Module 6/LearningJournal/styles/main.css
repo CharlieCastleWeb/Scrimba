@@ -1,0 +1,277 @@
+/* =================
+    RESET
+   ================= */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =================
+       TYPOGRAPHY
+      ================= */
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../assets/fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(../assets/fonts/source-sans-pro/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "Source Sans Pro_Semibold";
+    src: url(../assets/fonts/source-sans-pro/SourceSansPro-Semibold.otf);
+}
+
+@font-face {
+    font-family: "Source Sans Pro_Bold";
+    src: url(../assets/fonts/source-sans-pro/SourceSansPro-Bold.otf);
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.nav-link {
+    font-family: "Source Sans Pro_Semibold", sans-serif;
+}
+
+.sans-pro-bold {
+    font-family: "Source Sans Pro_Bold", sans-serif;
+}
+
+h1 {
+    color: #0e0e0e;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.407px;
+}
+
+.nav-link {
+    color: #090909;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.post a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.recent-posts .post-date {
+    color: black;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.recent-posts h3 {
+    color: #141414;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.recent-posts h4 {
+    margin-top: 3.2em;
+    text-align: center;
+    margin-bottom: -0.7em;
+}
+
+.recent-posts .post-content {
+    color: #505050;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.view-more-btn {
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+footer p {
+    text-align: center;
+}
+
+.footer-title {
+    color: #ececec;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.36px;
+}
+
+.footer-copyright {
+    color: #d7d7d7;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+/* =================
+    LAYOUT
+   ================= */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    margin: 0 auto;
+    display: flex;
+    padding: 1.1em 0;
+    align-items: center;
+}
+
+header img {
+    display: block;
+    margin-right: 0.2em;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    margin-left: 3em;
+}
+
+.nav-link,
+.view-more-btn {
+    cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.view-more-btn:hover,
+.view-more-btn:focus {
+    color: rgb(52, 66, 224);
+}
+
+.recent-posts {
+    margin-top: -0.5em;
+    padding-bottom: 4em;
+}
+
+.recent-posts img {
+    width: 100%;
+}
+
+.recent-posts .post {
+    margin-top: 2.4em;
+}
+
+.recent-posts .post .post-date {
+    margin-top: 0.8em;
+}
+
+.recent-posts .post h3 {
+    margin-top: 0.4em;
+}
+
+.recent-posts .post .post-content {
+    margin-top: 0.5em;
+}
+
+.view-more-btn {
+    border: none;
+    background-color: transparent;
+    display: block;
+    width: 30%;
+    margin: 1.8em auto -1em auto;
+}
+
+footer {
+    background-color: #202020;
+    padding: 2.4em 0 1.8em 0;
+}
+
+.footer-copyright {
+    margin-top: 0.3em;
+}
+
+/* =================
+    MEDIA QUERIES
+   ================= */
+
+@media screen and (min-width: 700px) {
+    /* TYPOGRAPHY */
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .recent-posts h4 {
+        font-size: 1.5rem;
+    }
+
+    .extended-post-date {
+        font-size: 1rem;
+    }
+
+    .extended-post-title {
+        font-size: 2.25rem;
+    }
+
+    /* LAYOUT */
+
+    header {
+        padding: 1.4em 0;
+    }
+
+    header img {
+        width: 35px;
+    }
+
+    main {
+        background-color: #fafafa;
+    }
+
+    .recent-posts {
+        margin-top: 1em;
+    }
+
+    .recent-posts .posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1em;
+    }
+
+    .recent-posts .post {
+        flex: 1 1 45%;
+        max-width: 350px;
+    }
+
+    .recent-posts img {
+        height: 232px;
+        object-fit: cover;
+    }
+
+    .recent-posts h4 {
+        margin-top: 2em;
+    }
+}

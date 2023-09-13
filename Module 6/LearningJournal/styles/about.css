@@ -1,0 +1,97 @@
+@import url("./main.css");
+
+/* =================
+    TYPOGRAPHY
+   ================= */
+
+.about-post .extended-post-title {
+    line-height: 1.16;
+    letter-spacing: 0.5px;
+}
+
+/* =================
+    LAYOUT
+   ================= */
+
+.about-post h4 {
+    margin-top: 1.3em;
+}
+
+.about-post {
+    margin-top: 2em;
+}
+
+.about-post .extended-post-title {
+    width: 85%;
+}
+
+.about-post p:first-of-type {
+    margin-bottom: 3.2em;
+}
+
+.about-post .post-content {
+    margin-top: 1.2em;
+}
+
+img.profile-picture {
+    display: block;
+    margin-top: -0.5em;
+    margin-bottom: 1.8em;
+    width: 49%;
+}
+
+/* =================
+    MEDIA QUERIES
+   ================= */
+
+@media screen and (min-width: 700px) {
+    /* TYPOGRAPHY */
+
+    .about-post h4 {
+        font-size: 1.25rem;
+    }
+
+    /* LAYOUT */
+
+    .about-post {
+        margin-top: 0;
+        padding-top: 2em;
+    }
+
+    .about-post-content * {
+        width: 86.5%;
+        margin: 0 auto;
+    }
+
+    .about-post-header {
+        margin-top: 4.2em;
+        display: flex;
+        align-items: center;
+    }
+
+    .about-post-header img {
+        width: 32%;
+    }
+
+    .about-post-header div {
+        margin-left: 2em;
+        margin-top: -2.5em;
+    }
+
+    .about-post .extended-post-title {
+        width: 100%;
+    }
+
+    .about-post-header .post-content {
+        margin-top: 0.8em;
+    }
+
+    .about-post-content {
+        margin-top: 2.8em;
+        padding-bottom: 0em;
+    }
+
+    .about-post p:first-of-type {
+        margin-bottom: 0em;
+    }
+}

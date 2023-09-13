@@ -38,7 +38,7 @@ const displayPost = ({
                     alt="${imgAlt}"
                 >
                 <p class="post-date">${postDate}</p>
-                <h3>${postTitle}</h3>
+                <h3 class="sans-pro-bold">${postTitle}</h3>
                 <p class="post-content">${postContent}</p>
             </a>
         </div>

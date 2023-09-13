@@ -1,0 +1,100 @@
+@import url("./main.css");
+
+/* =================
+    TYPOGRAPHY
+   ================= */
+
+.hero {
+    color: white;
+}
+
+.hero a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-post-date {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.hero-post-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.96px;
+}
+
+.hero .post-content {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* =================
+    LAYOUT
+   ================= */
+
+.hero {
+    position: relative;
+}
+
+img {
+    border-radius: 3px;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.hero-content {
+    position: absolute;
+    margin-bottom: 1.8em;
+    bottom: 0;
+    z-index: 2;
+}
+
+.hero-post-title {
+    margin-top: 0.3em;
+}
+
+.hero .post-content {
+    margin-top: 0.5em;
+}
+
+/* =================
+    MEDIA QUERIES
+   ================= */
+
+@media screen and (min-width: 700px) {
+    /* TYPOGRAPHY */
+
+    .hero-post-date {
+        font-size: 1rem;
+    }
+
+    .hero-post-title {
+        font-size: 2.5rem;
+    }
+
+    /* LAYOUT */
+
+    .hero img {
+        height: 488px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .hero-content {
+        padding-bottom: 2em;
+    }
+
+    .hero-post-date,
+    .hero-post-title,
+    .hero .post-content {
+        margin-left: 0;
+    }
+
+    .hero .post-content {
+        width: 60%;
+    }
+}
