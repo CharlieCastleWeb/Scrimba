@@ -17,7 +17,7 @@ viewMoreBtn.addEventListener("click", () => {
 
 const displayPosts = (num) => {
     for (let i = num; i < num + 3; i++) {
-        postsDisplay.innerHTML += displayPost(recentPosts[i]);
+        if(recentPosts[i]) postsDisplay.innerHTML += displayPost(recentPosts[i]);
     }
     recentPostsNum += 3;
 }
