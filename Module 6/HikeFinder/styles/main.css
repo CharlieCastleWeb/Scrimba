@@ -109,10 +109,16 @@ h5 {
     text-align: center;
 }
 
+.fa-solid {
+    font-size: 4.2rem;
+    color: #4E4E4E;
+}
+
 h5 {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.5;
+    letter-spacing: 0.35px;
 }
 
 .action p {
@@ -129,6 +135,7 @@ h5 {
 
 footer {
     color: #fff;
+    text-align: center;
 }
 
 footer .nav-link {
@@ -152,6 +159,11 @@ footer h2 {
 /* =================
     LAYOUT
    ================= */
+
+.container {
+    width: 94.5%;
+    margin: 0 auto;
+}
 
 header {
     display: flex;
@@ -208,14 +220,32 @@ h1 {
     /* margin-top: 1.5em; */
 }
 
-.search-btn {
-    display: block;
-    width: 26%;
-    padding: 0.35em 0;
-    margin-right: 0.15em;
+.btn {
     border: none;
-    background-color: #638A5C;
+    background-color: #638a5c;
+    border: solid 4px transparent;
+}
+
+.btn:hover,
+.btn:focus {
+    border: 4px solid #638a5c;
+    background-color: white;
+    color: #638a5c;
+}
+
+.search-btn {
+    width: 26%;
+    padding: 0.25em 0;
+    margin-right: 0.12em;
     border-radius: 0 4px 4px 0;
+}
+
+.learn-more-btn {
+    width: 22%;
+    margin-top: 1.3em;
+    padding: 0.5em 0;
+    margin-right: 0.12em;
+    border-radius: 4px;
 }
 
 .hero form i {
@@ -223,6 +253,78 @@ h1 {
     padding: 0.55em;
 }
 
-.search-btn {
-    margin-left: auto;
+h3 {
+    margin-top: 1.1em;
+    margin-bottom: -0.5em;
 }
+
+.city-hike {
+    margin-top: 3em;
+}
+
+.city-hike img {
+    width: 100%;
+}
+
+.city-hike h4 {
+    margin-top: 0.9em;
+}
+
+.city-hike-text {
+    width: 92.5%;
+    margin: 0 auto;
+}
+
+.city-hike-text h5 {
+    margin-top: 0.25em;
+    letter-spacing: 0.35px;
+}
+
+.city-hike-text p {
+    margin-top: 1.4em;
+    width: 95%;
+}
+
+.actions {
+    background-color: #fafafa;
+    margin-top: 4em;
+    padding-bottom: 5.5em;
+}
+
+.fa-solid {
+    margin-top: 1em;
+}
+
+.action h5 {
+    margin-top: 1.2em;
+}
+
+.action p {
+    margin: 1em auto 0.4em;
+    width: 72%;
+}
+
+footer {
+    background-color: black;
+    padding: 4.2em 0;
+}
+
+footer nav ul, .footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul {
+    list-style: none;
+    gap: 1.3em;
+}
+
+.footer-logo {
+    margin-top: 3em;
+}
+
+footer .copyright {
+    margin-top: 0.35em;
+}
+
+
