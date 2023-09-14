@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="index.css" />
+        <!-- Font Awesome -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -11,6 +12,16 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Styles -->
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="stylesheet" href="./styles/home.css" />
         <title>HikeFinder</title>
     </head>
     <body>
@@ -25,15 +36,19 @@
         </header>
         <main>
             <section class="hero">
-                <img src="./assets/images/image 2.jpg" alt="Lake landscape" />
+                <img src="./assets/images/hero.jpg" alt="Lake landscape" />
                 <div class="hero-content">
-                    <h2>
-                        Find Your Next <span class="adventure">Adventure</span>
-                    </h2>
-                    <p>
-                        Your next hiking adventure awaits. Get on the trail with
-                        detailed maps and updates shared by hikers like you.
-                    </p>
+                    <div class="hero-content-text">
+                        <h2>
+                            Find Your Next
+                            <span class="yellow-text">Adventure</span>
+                        </h2>
+                        <p>
+                            Your next hiking adventure awaits. Get on the trail
+                            with detailed maps and updates shared by hikers like
+                            you.
+                        </p>
+                    </div>
                     <form>
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input
@@ -42,7 +57,9 @@
                             id="city-search"
                             placeholder="Search by city"
                         />
-                        <button type="submit">Search</button>
+                        <button type="submit" class="btn search-btn">
+                            Search
+                        </button>
                     </form>
                 </div>
             </section>
@@ -51,6 +68,7 @@
                 <h3>Hikes near Bergen</h3>
                 <div class="city-hikes">
                     <div class="city-hike">
+                        <img src="./assets/images/hike1.jpg" alt="" />
                         <h4>Floyen</h4>
                         <h5>
                             Length: <span class="length">10.2</span> km - Est.
@@ -62,9 +80,10 @@
                             large and varied hiking area, spectacular views of
                             the city.
                         </p>
-                        <button class="learn-more">Learn more</button>
+                        <button class="btn learn-more-btn">Learn more</button>
                     </div>
                     <div class="city-hike">
+                        <img src="./assets/images/hike2.jpg" alt="" />
                         <h4>Floyen</h4>
                         <h5>
                             Length: <span class="length">10.2</span> km - Est.
@@ -76,9 +95,10 @@
                             large and varied hiking area, spectacular views of
                             the city.
                         </p>
-                        <button class="learn-more">Learn more</button>
+                        <button class="btn learn-more-btn">Learn more</button>
                     </div>
                     <div class="city-hike">
+                        <img src="./assets/images/hike3.jpg" alt="" />
                         <h4>Floyen</h4>
                         <h5>
                             Length: <span class="length">10.2</span> km - Est.
@@ -90,7 +110,7 @@
                             large and varied hiking area, spectacular views of
                             the city.
                         </p>
-                        <button class="learn-more">Learn more</button>
+                        <button class="btn learn-more-btn">Learn more</button>
                     </div>
                 </div>
             </section>
@@ -125,10 +145,10 @@
         <footer>
             <nav>
                 <ul>
-                    <li>HOME</li>
-                    <li>EXPLORE</li>
-                    <li>LOG IN</li>
-                    <li>SIGN UP</li>
+                    <li><a href="" class="nav-link">HOME</a></li>
+                    <li><a href="" class="nav-link">EXPLORE</a></li>
+                    <li><a href="" class="nav-link">LOG IN</a></li>
+                    <li><a href="" class="nav-link">SIGN UP</a></li>
                 </ul>
             </nav>
 
