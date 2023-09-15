@@ -1,16 +1,55 @@
+/* =================
+    TYPOGRAPHY
+   ================= */
+
+.trails h4 {
+    font-size: 2rem;
+}
+
+.trails h5 {
+font-size: 1.875rem;
+font-weight: 400;
+}
+
+.trails .fa-star {
+    font-size: 1.8rem;
+    color: #638A5C;   
+}
+
+.trails .content-description {
+    font-size: 1.625rem;
+    letter-spacing: -0.52px;
+}
 
 /* =================
     LAYOUT
    ================= */
 
-.hero img{
-    width: 100%;
-    object-fit: cover;
-    height: 420px;    
+.hero img {
+    height: 420px;
 }
 
 .trail {
     margin-top: 3em;
 }
 
+.trails h4 {
+    margin-top: 1.6em;
+}
 
+.trails h5 {
+    margin-top: -0.4em;
+}
+
+.trails .fa-star {
+    display: inline-block;
+    margin-left: 0.2em;
+}
+
+.trails .content-description {
+    margin-top: 1em;
+}
+
+.trail-map {
+    display: none;
+}
