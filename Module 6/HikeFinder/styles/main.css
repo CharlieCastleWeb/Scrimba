@@ -72,13 +72,11 @@ h2 {
 }
 
 .search-btn {
-    /* font-family: inherit; */
     font-size: 2rem;
     font-weight: 600;
 }
 
 .learn-more-btn {
-    /* font-family: inherit; */
     font-size: 1.125rem;
 }
 
@@ -216,10 +214,6 @@ h1 {
     border: none;
 }
 
-.hero form input[type="text"]::placeholder {
-    /* margin-top: 1.5em; */
-}
-
 .btn {
     border: none;
     background-color: #638a5c;
@@ -254,7 +248,7 @@ h1 {
 }
 
 h3 {
-    margin-top: 1.1em;
+    margin-top: 1.2em;
     margin-bottom: -0.5em;
 }
 
@@ -266,7 +260,7 @@ h3 {
     width: 100%;
 }
 
-.city-hike h4 {
+h4 {
     margin-top: 0.9em;
 }
 

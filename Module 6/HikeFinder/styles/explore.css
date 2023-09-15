@@ -1,0 +1,16 @@
+
+/* =================
+    LAYOUT
+   ================= */
+
+.hero img{
+    width: 100%;
+    object-fit: cover;
+    height: 420px;    
+}
+
+.trail {
+    margin-top: 3em;
+}
+
+
