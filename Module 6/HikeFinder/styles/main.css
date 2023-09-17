@@ -192,7 +192,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-nav {
+header nav {
     display: none;
 }
 
@@ -293,7 +293,10 @@ nav ul li:nth-of-type(2) {
 
 .hero img {
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+    object-position: center center;
 }
 
 .hero-content {
@@ -324,7 +327,6 @@ nav ul li:nth-of-type(2) {
 }
 
 .hero form input {
-    flex: 1 1 auto;
     padding: 0.4em 0;
     border: none;
 }
@@ -426,12 +428,15 @@ footer nav ul,
 
 footer nav ul {
     list-style: none;
-    gap: 1.3em;
 }
 
 .footer-logo {
     margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 footer .copyright {
     margin-top: 0.35em;
@@ -450,11 +455,12 @@ footer .copyright {
         padding: 1.2em 0;
     }
 
-    .mobile-nav, .burger {
+    .mobile-nav,
+    .burger {
         display: none;
     }
 
-    nav {
+    header nav {
         display: flex;
     }
 
