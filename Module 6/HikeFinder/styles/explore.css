@@ -7,13 +7,13 @@
 }
 
 .trails h5 {
-font-size: 1.875rem;
-font-weight: 400;
+    font-size: 1.875rem;
+    font-weight: 400;
 }
 
 .trails .fa-star {
     font-size: 1.8rem;
-    color: #638A5C;   
+    color: #638a5c;
 }
 
 .trails .content-description {
@@ -48,4 +48,84 @@ font-weight: 400;
 
 .trail-map {
     display: none;
+}
+
+/* =================
+    MEDIA QUERIES
+   ================= */
+
+@media screen and (min-width: 850px) {
+    .trail-map {
+        display: block;
+    }
+
+    .curated-trails {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "trails map";
+        grid-template-columns: 38% 58%;
+        gap: 4%;
+        margin-bottom: 5em;
+    }
+
+    .curated-trails h3 {
+        grid-area: header;
+        margin-bottom: 0.9em;
+    }
+
+    .curated-trails .trails {
+        grid-area: trails;
+    }
+
+    .curated-trails .trail-map {
+        grid-area: map;
+        width: 100%;
+    }
+
+    .trail-map img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .trail {
+        display: grid;
+        grid-template-areas:
+            "header img"
+            "sub-header img"
+            "text text";
+        grid-template-columns: 2.25fr 1fr;
+        margin-top: 0;
+    }
+
+    .trail:not(:first-child) {
+        margin-top: 3.2em;
+    }
+
+    .trail:not(:last-child) {
+        border-bottom: 1px solid #A8A8A8;;
+    }
+
+    .trail h4 {
+        grid-area: header;
+        margin: 0.2em;
+    }
+
+    .trail h5 {
+        grid-area: sub-header;
+    }
+
+    .trail img {
+        grid-area: img;
+        width: 86%;
+        height: 100%;
+        object-fit: cover;
+        margin-left: 2.2em;
+    }
+
+    .trail p {
+        grid-area: text;
+        padding-top: 0.7em;
+        margin-bottom: 1em;
+    }
 }
